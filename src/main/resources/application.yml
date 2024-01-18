@@ -1,16 +1,12 @@
-server:
-  port: 9091
-
-
 spring:
   datasource:
     url: jdbc:sqlserver://employeeserverassign.database.windows.net:1433;database=Employee;user=lakshya@employeeserverassign;password=password@123;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
     username: lakshya
     password: password@123
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
 
   jpa:
-    hibernate:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
       ddl-auto: update
     show-sql: true
